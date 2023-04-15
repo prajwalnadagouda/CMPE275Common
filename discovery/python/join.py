@@ -8,6 +8,7 @@ import time
 
 zk = KazooClient(hosts='127.0.0.1:2182') #change it to the zookeeper address
 zk.start()
+zk.add_auth("digest","cmpe:275")
 
 
 zk.ensure_path("/servers/")

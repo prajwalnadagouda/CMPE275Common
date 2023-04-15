@@ -2,8 +2,9 @@ from kazoo.client import KazooClient
 import os
 
 
-zk = KazooClient(hosts='127.0.0.1:2182') #change it to the zookeeper address
+zk = KazooClient(hosts='127.0.0.1:2181') #change it to the zookeeper address
 zk.start()
+zk.add_auth("digest","cmpe:275")
 
 
 #Gets all the servers available
