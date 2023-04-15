@@ -6,7 +6,7 @@ PortNo = bytes(str(PortNo), encoding="ascii")
 import time
 
 
-zk = KazooClient(hosts='127.0.0.1:2182') #change it to the zookeeper address
+zk = KazooClient(hosts='127.0.0.1:2181') #change it to the zookeeper address
 zk.start()
 zk.add_auth("digest","cmpe:275")
 
